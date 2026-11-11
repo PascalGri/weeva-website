@@ -38,7 +38,7 @@ Public website repository: https://github.com/PascalGri/weeva-website
 
 Live website: https://pascalgri.github.io/weeva-website/
 
-GitHub Pages publishes the root of the `main` branch automatically after each push. The website files in the repository root are ready to serve; `.nojekyll` disables Jekyll processing. `npm run build` also creates a standalone copy in `dist/`, including `.nojekyll`, for other static hosts. Generated `dist/` files are not committed.
+The workflow in `.github/workflows/pages.yml` checks the JavaScript, builds `dist/` and deploys it to GitHub Pages after each push to `main`. It can also be started manually from the Actions tab. The repository's Pages publishing source must be set to **GitHub Actions** (`build_type: workflow`). Generated `dist/` files are not committed.
 
 To update the live website, edit this repository, run `npm run check` and `npm run build`, review the changes, commit them and push `main`. Keep all paths relative so pages and assets work below `/weeva-website/`.
 
