@@ -1,0 +1,41 @@
+/* Letters appear once, then keep a steady Weeva-blue glow. */
+h1 .hero-smart {
+  --smart-ink: #4a82d6;
+  position: relative;
+  display: inline-block;
+  padding: .025em .18em .06em .025em;
+  margin: -.025em -.07em -.06em -.025em;
+  overflow: visible;
+  font-weight: 530;
+  line-height: 1.2;
+  white-space: nowrap;
+  color: var(--smart-ink);
+  text-shadow: 0 0 .1em #4a82d680, 0 0 .28em #4a82d64d, 0 0 .5em #4a82d626;
+}
+
+.hero-smart > span {
+  display: inline-block;
+  overflow: visible;
+  color: inherit;
+  transform-origin: 50% 85%;
+  animation: smart-letter-arrive .85s cubic-bezier(.18,.8,.25,1.15) calc(.75s + var(--letter) * .075s) both;
+}
+
+:root[data-theme=light] h1 .hero-smart {
+  --smart-ink: #4a82d6;
+  text-shadow: 0 0 .14em #4a82d640, 0 0 .35em #4a82d626;
+}
+
+@keyframes smart-letter-arrive {
+  from { opacity: 0; transform: translateY(.3em) rotate(5deg) scale(.88); filter: blur(9px); }
+  65% { opacity: 1; transform: translateY(-.025em) rotate(-1deg) scale(1.015); filter: blur(0); }
+  to { opacity: 1; transform: translateY(0) rotate(0) scale(1); filter: blur(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-smart > span { animation: none; opacity: 1; transform: none; filter: none; }
+}
+
+@media (forced-colors: active) {
+  h1 .hero-smart { color: Highlight; text-shadow: none; }
+}

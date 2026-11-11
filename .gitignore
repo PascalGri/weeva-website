@@ -1,0 +1,4 @@
+dist/
+.sites-runtime/
+.DS_Store
+.openai/

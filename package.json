@@ -1,0 +1,7 @@
+{
+  "name": "weeva-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Weeva marketing website based on the licensed React Bits Pro AI SaaS reference",
+  "scripts": {"dev": "python3 -m http.server 4173 --bind 127.0.0.1", "build": "node build.mjs", "check": "node --check landing.js && node --check fluid.js && node --check bulge.js && node --check subpages.js"}
+}
