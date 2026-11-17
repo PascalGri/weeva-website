@@ -80,3 +80,9 @@
 .import-footnote{align-items:flex-start;flex-wrap:wrap;column-gap:8px;row-gap:8px;padding:16px 1px 0;font-size:12px}.import-footnote>svg{margin-top:2px}.import-footnote>p{flex:1}.import-footnote>span{width:100%;margin:0 0 0 25px;font-size:10px}
 .import-process{grid-template-columns:1fr;gap:25px;padding-top:28px;margin-top:27px}.import-process li{gap:15px}.import-process h3{font-size:19px}.import-process p{font-size:14px;max-width:330px;margin-top:5px}
 }
+
+.pro-plan .price{font-size:clamp(48px,7vw,82px);letter-spacing:-.075em}
+.pro-plan .price>span:last-child{font-size:.45em;padding-top:.22em;margin-left:.12em}
+.price-comparison{align-items:stretch}
+.price-comparison .plan-top{margin:0;font-weight:600}
+.price-comparison .free-plan li svg,.pro-plan li svg{flex-shrink:0}
